@@ -1,0 +1,78 @@
+@font-face
+    font-family: 'Brandon Grotesque'
+    src: url(/assets/fonts/Brandon_reg.otf) format('opentype')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'Brandon Grotesque'
+    src: url(/assets/fonts/Brandon_bld.otf) format('opentype')
+    font-weight: bold
+    font-style: normal
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    height: 100%
+    width: 100%
+
+body
+    font-family: 'Brandon Grotesque'
+    background: url(/assets/images/background.png)
+    background-repeat: no-repeat
+    background-size: cover
+    display: grid
+    place-items: center
+    min-height: 100%
+    width: 100%
+    padding: 25px 25px
+
+    canvas
+        position: absolute
+        top: 0
+        left: 5px
+        right: 5px
+        bottom: 0
+        @media screen and ( max-height: 560px )
+            pointer-events: none
+
+    main
+        margin: 0px auto
+        flex-direction: column
+        display: flex
+        max-width: 500px
+        text-align: center
+        background: rgba(white, 0.5)
+        padding: 25px 45px
+        border-radius: 5px
+        box-shadow: 3px 3px 5px rgba(black, 0.05)
+
+        header
+            margin-bottom: 20px
+            img
+                height: 200px
+                border-radius: 50%
+                box-shadow: 0 5px 5px -3px rgba(black, 0.15)
+                border: 4px solid #9fcceb 
+            h1
+                color: rgba(#333333, 1)
+        
+        hr
+            width: 150px
+            margin: 12px auto
+            border: none
+            height: 1px
+            background: rgba(#333333, 0.1)
+        p
+            color: rgba(#333333, 0.9)
+            a
+                text-decoration: underline
+                color: rgba(#6d6d6d, 0.9)
+                opacity: 0.7
+                transition: all .15s ease-in-out
+                &:hover
+                    color: rgba(#9fcceb, 1)
+                    opacity: 1
